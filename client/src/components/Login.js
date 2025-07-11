@@ -27,7 +27,10 @@ function Login() {
       body: dataTosend,
     };
 
-    let JSONData = await fetch(":/validateToken", reqOptions);
+    let JSONData = await fetch(
+      ":4444/validateToken",
+      reqOptions
+    );
     let JSOData = await JSONData.json();
     console.log(JSOData);
     alert(JSOData.msg);
@@ -46,7 +49,7 @@ function Login() {
       body: dataTosend,
     };
 
-    let JSONData = await fetch(":/login", reqOptions);
+    let JSONData = await fetch(":4444/login", reqOptions);
     let JSOData = await JSONData.json();
     console.log(JSOData);
     alert(JSOData.msg);
