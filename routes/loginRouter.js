@@ -49,7 +49,7 @@ loginRouter.post("/validateToken", upload.none(), async (req, res) => {
   }
 });
 
-loginRouter.post("/login", upload.none(), async (req, res) => {
+loginRouter.post("/", upload.none(), async (req, res) => {
   console.log(req.body);
   let userArray = await user.find().and([{ email: req.body.email }]);
   if (userArray.length > 0) {
