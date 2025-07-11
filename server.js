@@ -33,8 +33,16 @@ app.listen(4444, () => {
   console.log("Listening to the Port Number 4444");
 });
 
+<<<<<<< HEAD
 app.get("*", (req, res) => {
   res.sendFile("./client/build/index.html");
+=======
+// app.get("*", (req, res) => {
+//   res.sendFile("./client/build/index.html");
+// });
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+>>>>>>> eaeb241 (modified server)
 });
 
 const connectToMDB = () => {
