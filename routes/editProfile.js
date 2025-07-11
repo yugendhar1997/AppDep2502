@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 editProfileRouter.patch(
-  "/editProfile",
+  "/",
   upload.single("profilePic"),
   async (req, res) => {
     try {
