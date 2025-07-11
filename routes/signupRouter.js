@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-signupRouter.post("/signup", upload.single("profilePic"), async (req, res) => {
+signupRouter.post("/", upload.single("profilePic"), async (req, res) => {
   console.log(req.body);
   console.log(req.file);
 
