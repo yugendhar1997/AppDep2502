@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use("/profilePics", express.static("profilePics"));
 app.use(express.static(path.join(__dirname, "./client/build")));
-app.use("/", loginRouter);
-app.use("/", signupRouter);
-app.use("/", editProfileRouter);
+app.use("/login", loginRouter);
+app.use("/signup", signupRouter);
+app.use("/edit", editProfileRouter);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
