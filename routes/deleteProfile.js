@@ -4,7 +4,7 @@ const user = require("../models/user");
 const deleteProfileRouter = express.Router();
 
 deleteProfileRouter.delete(
-  "/deleteProfile",
+  "/",
   upload.none(),
   async (req, res) => {
     let deleteResult = await user.deleteMany({ email: req.body.email });
